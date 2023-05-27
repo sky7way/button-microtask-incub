@@ -15,15 +15,15 @@ function App() {
     const DeleteButton = (status: string) => {
         console.log(status)
     }
-    const OnlyClick = (respect:string) => {
-        console.log(respect)
+    const OnlyClick = () => {
+        console.log('Yo!')
     }
 
     return (
         <div className="App">
             <Button nameButton={'Add Button'} callBack={() => AddButton('Hello, Vasya')}/>
             <Button nameButton={'Delete Button'} callBack={() => DeleteButton('Goodbye, Vasya')}/>
-            <Button nameButton={'Yo'} callBack={() => OnlyClick('Yo')} />
+            <Button nameButton={'Yo'} callBack={OnlyClick} />
         </div>
     );
 }
