@@ -9,11 +9,21 @@ function App() {
     // const deleteButton = (event:MouseEvent<HTMLButtonElement>) => {
     //     console.log('Chao!')
     // }
+    const AddButton = (status: string) => {
+        console.log(status)
+    }
+    const DeleteButton = (status: string) => {
+        console.log(status)
+    }
+    const OnlyClick = (respect:string) => {
+        console.log(respect)
+    }
 
     return (
         <div className="App">
-            <Button nameButton={'Add Button'} />
-            <Button nameButton={'Delete Button'} />
+            <Button nameButton={'Add Button'} callBack={() => AddButton('Hello, Vasya')}/>
+            <Button nameButton={'Delete Button'} callBack={() => DeleteButton('Goodbye, Vasya')}/>
+            <Button nameButton={'Yo'} callBack={() => OnlyClick('Yo')} />
         </div>
     );
 }
